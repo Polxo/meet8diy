@@ -19,3 +19,10 @@ Route::get('/rendi/pendaftaran', function(){
 });
 
 Route::post('/rendi/pendaftaran', 'RendiPendaftaranController@simpanPendaftaran');
+
+Route::get('/pendaftarannando', function(){
+	return view('nando.pendaftarannando');
+});
+
+Route::post('/pendaftarannando','PendaftaranNandoController@simpandata');
+
