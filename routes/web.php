@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/rendi/pendaftaran', function(){
+	return view('rendi/pendaftaran');
+});
+
+Route::post('/rendi/pendaftaran', 'RendiPendaftaranController@simpanPendaftaran');
