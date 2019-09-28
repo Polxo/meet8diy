@@ -26,3 +26,8 @@ Route::get('/pendaftarannando', function(){
 
 Route::post('/pendaftarannando','PendaftaranNandoController@simpandata');
 
+Route::get('/formsidiq', function(){
+	return view('sidiq.form');
+});
+
+Route::match(array('GET','POST'),'form/simpan', 'SidiqFormController@simpandata');
