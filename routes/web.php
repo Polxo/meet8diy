@@ -14,6 +14,37 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Route::get('/wahyu', function () {
     return view('wahyu');
 });
