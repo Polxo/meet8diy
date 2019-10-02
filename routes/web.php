@@ -14,38 +14,25 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Route::get('/wahyu', function () {
     return view('wahyu');
 });
 Route::post('/wahyu', 'WahyuController@simpanWahyu');
+Route::get('/rendi/pendaftaran', function(){
+	return view('rendi/pendaftaran');
+});
+
+Route::post('/rendi/pendaftaran', 'RendiPendaftaranController@simpanPendaftaran');
+
+Route::get('/pendaftarannando', function(){
+	return view('nando.pendaftarannando');
+});
+
+Route::post('/pendaftarannando','PendaftaranNandoController@simpandata');
+
+Route::get('/formsidiq', function(){
+	return view('sidiq.form');
+});
+
+Route::match(array('GET','POST'),'form/simpan', 'SidiqFormController@simpandata');
+
