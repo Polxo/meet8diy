@@ -14,6 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/wahyu', function () {
+    return view('wahyu');
+});
+Route::post('/wahyu', 'WahyuController@simpanWahyu');
 Route::get('/rendi/pendaftaran', function(){
 	return view('rendi/pendaftaran');
 });
@@ -31,3 +35,4 @@ Route::get('/formsidiq', function(){
 });
 
 Route::match(array('GET','POST'),'form/simpan', 'SidiqFormController@simpandata');
+
