@@ -35,4 +35,10 @@ Route::get('/formsidiq', function(){
 });
 
 Route::match(array('GET','POST'),'form/simpan', 'SidiqFormController@simpandata');
+Route::get('/yoga/pendaftaran', function(){
+	return view('yoga/pendaftaran');
+});
+
+Route::post('/yoga/pendaftaran', 'YogaController@simpanPendaftaran');
+
 
