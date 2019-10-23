@@ -30,9 +30,12 @@ Route::get('/pendaftarannando', function(){
 
 Route::post('/pendaftarannando','PendaftaranNandoController@simpandata');
 
-Route::get('/formsidiq', function(){
+Route::get('/sidiq/home', function(){
 	return view('sidiq.form');
 });
+
+
+Route::match(array('GET','POST'),'sidiq.form.simpan', 'SidiqFormController@simpandata');
 
 Route::match(array('GET','POST'),'form/simpan', 'SidiqFormController@simpandata');
 Route::get('/yoga/pendaftaran', function(){
@@ -40,5 +43,6 @@ Route::get('/yoga/pendaftaran', function(){
 });
 
 Route::post('/yoga/pendaftaran', 'YogaController@simpanPendaftaran');
+
 
 
