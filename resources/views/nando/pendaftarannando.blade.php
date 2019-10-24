@@ -30,6 +30,15 @@
 <body>
 	<div class="pendaftaran">
 		<h1 align="center">Input Data Anda</h1>
+		@if(!$errors->isEmpty())
+		<h4>Terjadi Kesalahan</h4>
+		<p>Berikut adalah kesalahan yang terjadi</p>
+		<p>
+			@foreach ($errors->all() as $error)
+				<p>{{ $error }}</p>
+			@endforeach	
+		</p>
+		@endif
 		<form action="/pendaftarannando" method="post">
 			@csrf
 			<label>Nama</label>
