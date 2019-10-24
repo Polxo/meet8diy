@@ -44,5 +44,7 @@ Route::get('/yoga/pendaftaran', function(){
 
 Route::post('/yoga/pendaftaran', 'YogaController@simpanPendaftaran');
 
-
-
+Route::post('/form', 'FormController@saveForm');
+Route::get('/form', function(){
+	return view('form/index');
+});
